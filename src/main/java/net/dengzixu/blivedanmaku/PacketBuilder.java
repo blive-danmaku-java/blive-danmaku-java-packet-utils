@@ -1,8 +1,8 @@
-package net.dengzixu.blivexanmaku;
+package net.dengzixu.blivedanmaku;
 
 
-import net.dengzixu.blivexanmaku.enums.Operation;
-import net.dengzixu.blivexanmaku.enums.ProtocolVersion;
+import net.dengzixu.blivedanmaku.enums.Operation;
+import net.dengzixu.blivedanmaku.enums.ProtocolVersion;
 
 import java.nio.charset.StandardCharsets;
 

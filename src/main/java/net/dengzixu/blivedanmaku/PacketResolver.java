@@ -1,9 +1,9 @@
-package net.dengzixu.blivexanmaku;
+package net.dengzixu.blivedanmaku;
 
 
-import net.dengzixu.blivexanmaku.constant.Constant;
-import net.dengzixu.blivexanmaku.enums.Operation;
-import net.dengzixu.blivexanmaku.uitls.UncompressUtils;
+import net.dengzixu.blivedanmaku.constant.Constant;
+import net.dengzixu.blivedanmaku.enums.Operation;
+import net.dengzixu.blivedanmaku.uitls.UncompressedUtils;
 import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,9 +77,9 @@ public class PacketResolver {
         return switch (packets.get(0).protocolVersion()) {
             case NORMAL, HEARTBEAT -> packets;
             case ZLIB ->
-                    new PacketResolver(UncompressUtils.uncompress(packets.get(0).body(), UncompressUtils.Compressor.ZLIB)).resolve();
+                    new PacketResolver(UncompressedUtils.uncompressed(packets.get(0).body(), UncompressedUtils.Compressor.ZLIB)).resolve();
             case BROTLI ->
-                    new PacketResolver(UncompressUtils.uncompress(packets.get(0).body(), UncompressUtils.Compressor.BROTLI)).resolve();
+                    new PacketResolver(UncompressedUtils.uncompressed(packets.get(0).body(), UncompressedUtils.Compressor.BROTLI)).resolve();
             case UNKNOWN -> new ArrayList<>();
         };
 

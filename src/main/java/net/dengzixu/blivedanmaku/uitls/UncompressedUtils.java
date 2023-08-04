@@ -1,6 +1,8 @@
-package net.dengzixu.blivexanmaku.uitls;
+package net.dengzixu.blivedanmaku.uitls;
 
 import org.apache.commons.compress.compressors.brotli.BrotliCompressorInputStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,8 +10,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.InflaterInputStream;
 
-public class UncompressUtils {
-    public static byte[] uncompress(byte[] data, Compressor compressor) {
+public class UncompressedUtils {
+    // Logger
+    private static final Logger logger = LoggerFactory.getLogger(UncompressedUtils.class);
+
+    public static byte[] uncompressed(byte[] data, Compressor compressor) {
         if (null == data || data.length == 0) {
             return null;
         }
@@ -31,7 +36,7 @@ public class UncompressUtils {
                 byteArrayOutputStream.write(buffer, 0, n);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("uncompressed error", e);
         }
 
         return byteArrayOutputStream.toByteArray();

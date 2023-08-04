@@ -1,4 +1,4 @@
-package net.dengzixu.blivexanmaku.enums;
+package net.dengzixu.blivedanmaku.enums;
 
 import java.util.HashMap;
 import java.util.Map;

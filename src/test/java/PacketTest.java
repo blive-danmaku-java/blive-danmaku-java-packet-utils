@@ -1,8 +1,8 @@
 
-import net.dengzixu.blivexanmaku.Packet;
-import net.dengzixu.blivexanmaku.PacketBuilder;
-import net.dengzixu.blivexanmaku.enums.Operation;
-import net.dengzixu.blivexanmaku.enums.ProtocolVersion;
+import net.dengzixu.blivedanmaku.Packet;
+import net.dengzixu.blivedanmaku.PacketBuilder;
+import net.dengzixu.blivedanmaku.enums.Operation;
+import net.dengzixu.blivedanmaku.enums.ProtocolVersion;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

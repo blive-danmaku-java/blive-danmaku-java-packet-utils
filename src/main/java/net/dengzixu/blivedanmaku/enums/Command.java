@@ -1,4 +1,4 @@
-package net.dengzixu.blivexanmaku.enums;
+package net.dengzixu.blivedanmaku.enums;
 
 public enum Command {
     DANMU_MSG,

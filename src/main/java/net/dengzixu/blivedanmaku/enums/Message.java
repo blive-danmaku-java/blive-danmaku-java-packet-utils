@@ -1,4 +1,4 @@
-package net.dengzixu.blivexanmaku.enums;
+package net.dengzixu.blivedanmaku.enums;
 
 /**
  * 消息类型

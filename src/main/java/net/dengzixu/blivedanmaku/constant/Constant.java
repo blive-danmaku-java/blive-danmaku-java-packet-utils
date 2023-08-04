@@ -1,4 +1,4 @@
-package net.dengzixu.blivexanmaku.constant;
+package net.dengzixu.blivedanmaku.constant;
 
 public class Constant {
     public static final int PACKAGE_OFFSET = 0;
